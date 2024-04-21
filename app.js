@@ -33,6 +33,5 @@ createWindow().then((window) => {
 
     renderer.render(scene, camera);
   }
-
   animate();
 });
