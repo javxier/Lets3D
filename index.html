@@ -10,7 +10,7 @@
 <body>
     <script src="https://threejs.org/build/three.js"></script>
     <script>
-                // Create a scene, camera, and renderer
+        // Create a scene, camera, and renderer
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
@@ -19,9 +19,12 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        // Create a cube and add it to the scene
+        // Load a texture for the cube
+        const texture = new THREE.TextureLoader().load('path/to/texture.jpg');
+
+        // Create a cube with the texture and add it to the scene
         const geometry = new THREE.BoxGeometry(1, 1, 1);
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const material = new THREE.MeshBasicMaterial({ map: texture });
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
