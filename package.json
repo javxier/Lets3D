@@ -2,8 +2,9 @@
   "name": "lets3d",
   "version": "1.0.0",
   "type": "module",
-  "dependencies": {
+  "main": "app2.js",
+  "dependencies": 
+  {
     "three": "^0.163.0"
-    
   }
 }
