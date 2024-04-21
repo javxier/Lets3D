@@ -1,6 +1,5 @@
 // js/app.js
-
-import * as THREE from "three";
+const THREE = require("three");
 
 // Create a new Three.js scene
 const scene = new THREE.Scene();
